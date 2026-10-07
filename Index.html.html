@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lashes by Lyssa | Tyler, Texas</title>
+<style>
+:root{--pink:#ff6fae;--light:#fff0f6;--black:#111;--gray:#666}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#fff;color:var(--black);line-height:1.6}
+nav{position:sticky;top:0;z-index:10;background:#111;color:#fff;padding:14px 6%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;color:#ff8fbe;font-size:1.15rem}
+nav a{color:#fff;text-decoration:none;margin-left:18px;font-size:.9rem}
+.hero{min-height:88vh;background:linear-gradient(135deg,#111 0%,#1d1d1d 55%,#ff6fae 150%);color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;padding:60px 20px}
+.hero h1{font-size:clamp(3rem,10vw,6.5rem);letter-spacing:-3px}
+.hero h1 span{color:#ff78b1}
+.hero p{font-size:1.15rem;margin:18px auto 28px;max-width:600px;color:#f8dce9}
+.btn{display:inline-block;background:var(--pink);color:#111;text-decoration:none;font-weight:800;padding:14px 24px;border-radius:30px;margin:5px;box-shadow:0 8px 24px #0004}
+.btn.dark{background:#fff}
+section{padding:75px 7%;max-width:1100px;margin:auto}
+.section-title{text-align:center;margin-bottom:35px}
+.section-title h2{font-size:2.2rem}
+.section-title p{color:var(--gray)}
+.about{background:var(--light);max-width:none}
+.about-inner{max-width:950px;margin:auto;text-align:center}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{border:1px solid #eee;border-radius:20px;padding:28px;text-align:center;box-shadow:0 7px 25px #0000000d}
+.card h3{margin:8px 0;color:#111}
+.price{font-size:1.8rem;font-weight:900;color:var(--pink)}
+.book{background:#111;color:#fff;max-width:none;text-align:center}
+.book p{color:#ddd;margin:10px auto 25px;max-width:650px}
+form{max-width:650px;margin:auto;background:#1d1d1d;padding:25px;border-radius:20px;text-align:left}
+label{display:block;margin:12px 0 5px;font-weight:700}
+input,select,textarea{width:100%;padding:13px;border-radius:10px;border:1px solid #444;background:#fff;color:#111}
+textarea{min-height:110px;resize:vertical}
+footer{background:#000;color:#aaa;text-align:center;padding:30px 20px}
+footer strong{color:#ff78b1}
+.note{font-size:.85rem;color:#777;margin-top:12px}
+@media(max-width:600px){nav a{margin-left:9px;font-size:.75rem}.hero{min-height:78vh}section{padding:60px 5%}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">Lashes by Lyssa 🎀</div>
+  <div>
+    <a href="#about">About</a><a href="#services">Services</a><a href="#book">Book</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div>
+    <div style="font-size:2rem">🖤 ✨ 🎀 ✨ 🖤</div>
+    <h1>Lashes <span>by Lyssa</span></h1>
+    <p>Beautiful lashes. Beautiful confidence. Customized lash looks in Tyler, Texas.</p>
+    <a class="btn" href="#book">BOOK NOW</a>
+    <a class="btn dark" href="#services">VIEW SERVICES</a>
+  </div>
+</header>
+
+<section id="about" class="about">
+  <div class="about-inner">
+    <div class="section-title"><h2>About Me 💕</h2></div>
+    <p>Hi! I’m Lyssa, the owner and lash artist behind <strong>Lashes by Lyssa</strong>. I’m passionate about helping every client feel confident, beautiful, and comfortable while getting their lashes done. I love creating soft, cute, and customized lash looks that fit each person’s style.</p>
+    <p style="margin-top:12px"><strong>📍 Tyler, Texas</strong></p>
+  </div>
+</section>
+
+<section id="services">
+  <div class="section-title">
+    <h2>Services & Pricing</h2>
+    <p>Simple, cute, affordable lash looks.</p>
+  </div>
+  <div class="cards">
+    <div class="card"><div style="font-size:2rem">👁️</div><h3>Classic Set</h3><p>Soft and natural for an everyday look.</p><div class="price">$25</div></div>
+    <div class="card"><div style="font-size:2rem">✨</div><h3>Hybrid Set</h3><p>A mix of classic and fuller lashes.</p><div class="price">$30</div></div>
+    <div class="card"><div style="font-size:2rem">🎀</div><h3>Custom Look</h3><p>Tell me your vibe and we’ll create your look.</p><div class="price">$30</div></div>
+  </div>
+</section>
+
+<section id="book" class="book">
+  <div class="section-title">
+    <h2 style="color:#fff">Book Your Appointment 💗</h2>
+    <p>Fill out the form below and send your appointment request.</p>
+  </div>
+  <form action="https://formsubmit.co/" method="POST">
+    <label for="name">Name</label>
+    <input id="name" name="name" required placeholder="Your name">
+    <label for="phone">Phone number</label>
+    <input id="phone" name="phone" type="tel" required placeholder="(555) 555-5555">
+    <label for="service">Service</label>
+    <select id="service" name="service" required>
+      <option value="">Choose a service</option>
+      <option>Classic Set — $25</option>
+      <option>Hybrid Set — $30</option>
+      <option>Custom Look — $30</option>
+    </select>
+    <label for="date">Preferred date</label>
+    <input id="date" name="date" type="date" required>
+    <label for="time">Preferred time</label>
+    <input id="time" name="time" type="time" required>
+    <label for="notes">Notes</label>
+    <textarea id="notes" name="notes" placeholder="Anything you'd like me to know?"></textarea>
+    <button class="btn" type="submit" style="border:0;cursor:pointer;margin-top:18px;width:100%">REQUEST APPOINTMENT 💕</button>
+    <p class="note">Booking requests are not confirmed until Lyssa responds.</p>
+  </form>
+</section>
+
+<footer>
+  <p><strong>Lashes by Lyssa</strong> · Tyler, Texas</p>
+  <p>Thank you for supporting my small business! 💗</p>
+</footer>
+</body>
+</html>
