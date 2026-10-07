@@ -83,7 +83,7 @@ footer strong{color:#ff78b1}
     <h2 style="color:#fff">Book Your Appointment 💗</h2>
     <p>Fill out the form below and send your appointment request.</p>
   </div>
-  <form action="https://formsubmit.co/" method="POST">
+  <form id="bookingform">
     <label for="name">Name</label>
     <input id="name" name="name" required placeholder="Your name">
     <label for="phone">Phone number</label>
@@ -109,6 +109,29 @@ footer strong{color:#ff78b1}
 <footer>
   <p><strong>Lashes by Lyssa</strong> · Tyler, Texas</p>
   <p>Thank you for supporting my small business! 💗</p>
-</footer>
+</footer><script>
+document.getElementById("bookingForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const service = document.getElementById("service").value;
+  const date = document.getElementById("date").value;
+  const time = document.getElementById("time").value;
+  const notes = document.getElementById("notes").value;
+
+  const message =
+    "Hi Lyssa! 💕 I would like to book a lash appointment.\n\n" +
+    "👤 Name: " + name + "\n" +
+    "📱 Phone: " + phone + "\n" +
+    "✨ Service: " + service + "\n" +
+    "📅 Preferred Date: " + date + "\n" +
+    "⏰ Preferred Time: " + time + "\n" +
+    "📝 Notes: " + notes;
+
+  window.location.href =
+    "sms:4692236673?&body=" + encodeURIComponent(message);
+});
+</script>
 </body>
 </html>
